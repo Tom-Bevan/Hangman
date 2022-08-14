@@ -1,0 +1,3 @@
+pygame
+english_words
+googletrans==3.1.0a0
