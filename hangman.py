@@ -110,7 +110,33 @@ def reset_game():
 
     translator = Translator()
     english_word = random.choice(list(english_words_lower_alpha_set))
-    word = translator.translate(english_word, dest='fr').text.upper()
+    word = list(translator.translate(english_word, dest='fr').text.upper())
+    print(''.join(word))
+    for i in range (len(word)):
+      match word[i]:
+        case 'É':
+          word[i]='E'
+        case 'È':
+          word[i]='E'
+        case 'Ê':
+          word[i]='E'
+        case 'Ë':
+          word[i]='E'
+        case 'À':
+          word[i]='A'
+        case 'Â':
+          word[i]='A'
+        case 'Î':
+          word[i]='I'
+        case 'Ï':
+          word[i]='I'
+        case 'Û':
+          word[i]='U'
+        case 'Ô':
+          word[i]='O'
+        case 'Ö':
+          word[i]='O'
+    word = ''.join(word)
     print(word)
     guessed = []
 
