@@ -2,8 +2,10 @@ import math
 import pygame
 import random
 
-from english_words import english_words_lower_alpha_set
+from english_words import get_english_words_set
 from googletrans import Translator
+
+english_words_lower_alpha_set = get_english_words_set(['web2'], lower=True)
 
 pygame.init()
 
